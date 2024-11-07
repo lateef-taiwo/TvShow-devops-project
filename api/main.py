@@ -30,8 +30,8 @@ if not endpoint or not key:
 client = CosmosClient(endpoint, key)
 
 # Get a reference to the database and container
-database = client.get_database_client("TvShows")
-container = database.get_container_client("TvShowsContainer")
+database = client.get_database_client("tvshows-db")
+container = database.get_container_client("TVShows")
 
 @app.get("/")
 async def root():
